@@ -6,8 +6,9 @@
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: var(--text-base-dark);
+  color: var(--text-base-light);
+  font-family: var(--font-dm-sans);
 }
 
 #sidebar {
@@ -50,7 +51,11 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+}
+
+#sidebar nav ul li a:hover {
+  color: var(--text-base-light);
+  transition: 0.2s;
 }
 
 #sidebar .sidebar-library {
@@ -63,7 +68,6 @@ body {
   color: #b3b3b3;
   font-weight: 600;
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
   margin-top: 10px;
 }
 
@@ -71,6 +75,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+
+#sidebar .sidebar-library .library-content:hover {
+  color: var(--text-base-light);
+  transition: 0.2s;
 }
 
 #sidebar .sidebar-library .library-button {
@@ -80,13 +90,17 @@ body {
   border: 0px;
   font-size: 14px;
   font-weight: 700;
-  font-family: "DM Sans", sans-serif;
   display: flex;
   align-items: center;
   text-decoration: none;
   text-transform: none;
   padding: 16px 20px;
   text-align: center;
+}
+
+#sidebar .sidebar-library .library-button:hover {
+  color: var(--text-base-light);
+  transition: 0.2s;
 }
 
 #sidebar .sidebar-library .library-button .fa {
@@ -122,7 +136,7 @@ body {
 
 #sidebar .section-playlist-content .text {
   padding-bottom: 14px;
-  color: #fff;
+  color: var(--text-base-light);
 }
 
 #sidebar .section-playlist-content .title {
@@ -137,18 +151,24 @@ body {
 #sidebar .section-playlist-content .section-playlist-button {
   display: flex;
   justify-content: center;
-  background: #fff;
-  color: #000;
+  background: var(--text-base-light);
+  color: var(--text-base-dark);
   border-radius: 20px;
   font-size: 12px;
   font-weight: 700;
-  font-family: "DM Sans", sans-serif;
   text-decoration: none;
   text-transform: none;
   border: 0px;
   padding: 10px;
   margin-top: 12px;
   width: 113px;
+}
+
+#sidebar .section-playlist-content .section-playlist-button:hover {
+  background: transparent;
+  border: 1px solid var(--text-base-light);
+  color: var(--text-base-light);
+  transition: 0.3s;
 }
 
 #sidebar .cookies {
@@ -164,13 +184,13 @@ body {
 
 #sidebar .cookies a:hover {
   text-decoration: underline;
-  color: #fff;
+  color: var(--text-base-light);
 }
 
 #sidebar .languages .languages-button {
   background: transparent;
   border: 1px solid #878787;
-  color: #fff;
+  color: var(--text-base-light);
   cursor: pointer;
   align-items: center;
   font-weight: bold;
@@ -178,6 +198,12 @@ body {
   margin: 8px;
   padding: 8px;
   border-radius: 20px;
+}
+
+#sidebar .languages .languages-button:hover {
+  background: var(--text-base-light);
+  color: var(--text-base-dark);
+  transition: 0.3s;
 }
 
 #footer {
@@ -199,30 +225,32 @@ body {
 }
 
 #footer .footer-content .footer-title {
-  color: #fff;
+  color: var(--text-base-light);
   font-size: 14px;
   font-weight: bolder;
-  font-family: "DM Sans", sans-serif;
 }
 
 #footer .footer-content .footer-paragraph {
-  color: #fff;
+  color: var(--text-base-light);
   font-size: 15px;
   font-weight: 600;
-  font-family: "DM Sans", sans-serif;
 }
 
 #footer .footer-button {
   display: flex;
   justify-content: center;
-  background: #fff;
-  color: #000;
+  background: var(--text-base-light);
+  color: var(--text-base-dark);
   border-radius: 25px;
   font-size: 15px;
   font-weight: 700;
-  font-family: "DM Sans", sans-serif;
   text-decoration: none;
   text-transform: none;
   border: 0px;
   padding: 15px 26px;
+
+  transition: transform 0.3s ease-in-out;
+}
+#footer .footer-button:hover {
+  transform: scale(1.1);
 }

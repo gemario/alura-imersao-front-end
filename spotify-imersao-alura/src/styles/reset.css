@@ -104,7 +104,7 @@ section {
 
 body {
   line-height: 1;
-  background: #000;
+  background: var(--text-base-dark);
   font-family: var(--font-dm-sans);
 }
 
