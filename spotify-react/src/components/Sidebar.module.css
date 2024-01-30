@@ -1,0 +1,206 @@
+.sidebar {
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0.625rem;
+  top: 0;
+}
+
+.sidebarNavigation {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.625rem;
+  background: var(--gray-900);
+  border-radius: 8px;
+  gap: 0.5rem;
+}
+
+.sidebarNavigation .logo {
+  padding: 0.25rem 0.75rem;
+}
+
+.sidebarNavigation .logo img {
+  width: 5rem;
+  height: 1.5rem;
+}
+
+.sidebarNavigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebarNavigation ul li {
+  padding: 0.25rem 0.75rem;
+}
+
+.sidebarNavigation ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  color: var(--gray-200);
+}
+
+.sidebarNavigation ul li a:hover {
+  color: var(--white);
+  transition: 0.2s;
+}
+
+.sidebarNavigation ul li a span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sidebarLibrary {
+  background: var(--gray-900);
+  border-radius: 8px;
+}
+
+.sidebarLibrary .libraryContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+}
+
+.sidebarLibrary .libraryContent .libraryButton {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--gray-200);
+  cursor: pointer;
+}
+
+.sidebarLibrary .libraryContent .libraryButton:hover {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.sidebarLibrary .libraryContent .libraryButton span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sidebarLibrary .libraryContent .plusButton {
+  background: transparent;
+  color: var(--gray-200);
+  border: 0;
+  padding: 0.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebarLibrary .libraryContent .plusButton:hover {
+  background: var(--bg-hover-plus);
+  border-radius: 999px;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.sectionPlaylist {
+  background: var(--bg-playlist);
+  color: var(--gray-200);
+  margin: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+}
+
+.sectionPlaylist .sectionPlaylistContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.sectionPlaylist .sectionPlaylistContent .title {
+  font-weight: 700;
+}
+
+.sectionPlaylist .sectionPlaylistContent .text {
+  color: var(--white);
+}
+
+.sectionPlaylist .sectionPlaylistContent .subtitle {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--white);
+}
+
+.sectionPlaylistContent .sectionPlaylistButton {
+  width: 7.063rem;
+  display: flex;
+  justify-content: center;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+  border: 0;
+  padding: 0.625rem;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  height: 2.125rem;
+}
+
+.sectionPlaylistContent .sectionPlaylistButton:hover {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.cookies {
+  margin: 2rem;
+}
+
+.cookies a {
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.cookies a:hover {
+  text-decoration: underline;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.languages {
+  padding-inline: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.languages .languagesButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  padding: 0.5rem;
+  gap: 0.25rem;
+}
+
+.languages .languagesButton:hover {
+  background-color: var(--white);
+  color: var(--black);
+  transition: 0.3s;
+}

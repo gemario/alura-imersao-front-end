@@ -75,7 +75,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 
 #sidebar .sidebar-library .library-content:hover {
@@ -251,6 +250,7 @@ body {
 
   transition: transform 0.3s ease-in-out;
 }
+
 #footer .footer-button:hover {
   transform: scale(1.1);
 }
