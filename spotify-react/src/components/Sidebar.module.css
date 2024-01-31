@@ -204,3 +204,9 @@
   color: var(--black);
   transition: 0.3s;
 }
+
+@media (max-width: 23.438rem) {
+  .sidebar {
+    width: 342px;
+  }
+}

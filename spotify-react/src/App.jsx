@@ -5,7 +5,7 @@ import "./global.css";
 
 export function App() {
   return (
-    <div>
+    <div className="wrapper">
       <Sidebar />
       <Main />
       <Footer />

@@ -118,11 +118,11 @@
   margin: 1.5rem;
 }
 
-.playlist #greeting {
+.playlist .salutation {
   color: var(--white);
   font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3px;
+  font-weight: 900;
+  margin-bottom: 0.875rem;
 }
 
 .playlist .session {
@@ -336,4 +336,53 @@
 
 #resultArtist {
   padding: 20px 40px;
+}
+
+@media (max-width: 63.438rem) {
+  .headerSearch {
+    display: none !important;
+    width: auto !important;
+    display: none;
+  }
+
+  .headerLogin .subscribe {
+    font-size: 12px !important;
+    padding: 10px !important;
+    margin-right: 5px !important;
+  }
+
+  .offerListItem {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (min-width: 63.5rem) and (max-width: 71.25rem) {
+  .headerSearch {
+    display: none !important;
+    width: auto !important;
+    display: none;
+  }
+
+  .offerListItem {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 23.438rem) {
+  .playlist {
+    display: none;
+  }
+
+  .playlistContainer {
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: auto; /* Altura automática, ajusta conforme o conteúdo */
+  }
+
+  .offerListItem {
+    grid-template-columns: 1fr;
+  }
+
+  .offerScrollContainer {
+    overflow-y: visible;
+  }
 }

@@ -22,8 +22,31 @@ import album12 from "../assets/playlist/12.jpeg";
 import album13 from "../assets/playlist/13.jpeg";
 import album14 from "../assets/playlist/14.jpeg";
 import album15 from "../assets/playlist/15.jpeg";
+import { useEffect, useState } from "react";
 
 export function Main() {
+  const [greeting, setGreeting] = useState("");
+
+  useEffect(() => {
+    const updateGreeting = () => {
+      const currentTime = new Date().getHours();
+
+      if (currentTime >= 6 && currentTime < 12) {
+        setGreeting("Bom Dia! ☀️");
+      } else if (currentTime >= 12 && currentTime < 18) {
+        setGreeting("Boa Tarde! 🌤️");
+      } else {
+        setGreeting("Boa Noite! 🌙");
+      }
+    };
+
+    updateGreeting();
+
+    const intervalID = setInterval(updateGreeting, 60000);
+
+    return () => clearInterval(intervalID);
+  }, []);
+
   return (
     <main className={styles.main} id="main">
       <div className={styles.mainContainer}>
@@ -53,7 +76,7 @@ export function Main() {
         <div className={styles.playlistContainer}>
           <div id={styles.resultPlaylists}>
             <div className={styles.playlist}>
-              <h1 id={styles.greeting}></h1>
+              <h1 className={styles.salutation}>Olá, {greeting} </h1>
               <h2 className={styles.session}>Navegar por todas as seções</h2>
             </div>
             <div className={styles.offerScrollContainer}>
@@ -153,11 +176,11 @@ export function Main() {
               </div>
             </div>
           </div>
-          <div id="result-artist" className={styles.hidden}>
+          <div id={styles.resultArtist} className={styles.hidden}>
             <div className={styles.gridContainer}>
               <div className={styles.artistCard} id="">
                 <div className={styles.cardImg}>
-                  <img id="artist-img" className={styles.artistImg} />
+                  <img id={styles.artistImg} className={styles.artistImg} />
                   <div className={styles.play}>
                     <Play className={styles.iconPlay} />
                   </div>
